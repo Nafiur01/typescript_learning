@@ -1,4 +1,4 @@
-class User{
+abstract class User{
     userName:string;
     age:number;
 
@@ -8,9 +8,7 @@ class User{
         this.age = age;
     }
 
-    display():void{
-        console.log(`Your username is ${this.userName} and your age is ${this.age}`);
-    };
+    abstract display():void{};
 }
 
 // let user1 = new User("Nafiur",25);
@@ -27,5 +25,7 @@ class Student extends User{
 
 }
 
-let student1 = new Student('nafiur',23,7909);
-student1.display()
+// let student1 = new Student('nafiur',23,7909);
+// student1.display()
+
+let user1 = new User("nafiur",25);
